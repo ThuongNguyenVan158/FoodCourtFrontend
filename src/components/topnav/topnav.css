@@ -46,10 +46,12 @@
     display: flex;
     align-items: center;
     padding: 20px;
+    color: black;
+    background-color: var(--txt-color-dark);
 }
 
 .notification-item:hover {
-    background-color: var(--second-bg);
+    background-color: var(--main-color-green);
 }
 
 .notification-item > i {
