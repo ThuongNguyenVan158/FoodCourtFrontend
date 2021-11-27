@@ -88,7 +88,7 @@ function UserPage() {
         isLogin: true,
         userInfo: {
           email: newData.email,
-          id: 7,
+          id: data.userInfo.id,
           name: newData.name,
           phone: newData.phone,
           username: newData.username,
