@@ -10,7 +10,7 @@ import "./assets/css/index.css";
 
 import App from "./App";
 
-document.title = "Fourcourt";
+document.title = "Foodcourt";
 
 ReactDOM.render(
   <Provider store={store}>
