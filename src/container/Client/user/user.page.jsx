@@ -88,12 +88,16 @@ function UserPage() {
         isLogin: true,
         userInfo: {
           email: newData.email,
-          id: 7,
+          id: data.userInfo.id,
           name: newData.name,
           phone: newData.phone,
           username: newData.username,
         },
       }
+      const local = JSON.parse(localStorage.getItem('user'));
+      local.customer = payload.userInfo;
+      localStorage.removeItem('user');
+      localStorage.setItem('user', JSON.stringify(local));
       dispatch(setLoginAction(payload));
     } catch (err) {
       alert("Cập nhật thông tin không thành công!");
