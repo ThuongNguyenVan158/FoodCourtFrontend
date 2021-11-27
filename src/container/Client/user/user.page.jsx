@@ -94,6 +94,10 @@ function UserPage() {
           username: newData.username,
         },
       }
+      const local = JSON.parse(localStorage.getItem('user'));
+      local.customer = payload.userInfo;
+      localStorage.removeItem('user');
+      localStorage.setItem('user', JSON.stringify(local));
       dispatch(setLoginAction(payload));
     } catch (err) {
       alert("Cập nhật thông tin không thành công!");
